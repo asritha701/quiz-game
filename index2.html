@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | Quiz Game</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Welcome to Quiz Game</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter your name" required>
+      <button type="submit">Start Quiz</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('username').value;
+      localStorage.setItem('username', name);
+      window.location.href = "quiz.html";
+    };
+  </script>
+</body>
+</html>
